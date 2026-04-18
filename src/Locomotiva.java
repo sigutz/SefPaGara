@@ -14,4 +14,9 @@ public class Locomotiva extends Fiare {
         this.tipMotor = tipMotor;
         this.kmOraMax = kmOraMax;
     }
+
+    @Override
+    public String toString() {
+        return super.toString() + "\n-> capcaitate tone: " + capacitate_tone.toString() + "\n -> motor: " + tipMotor.toString() +"\n -> km/h : " + kmOraMax.toString();
+    }
 }

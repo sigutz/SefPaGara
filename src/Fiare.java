@@ -31,4 +31,9 @@ public class Fiare {
     public Cuplaj getCuplaj() {
         return cuplaj;
     }
+
+    @Override
+    public String toString() {
+        return nume + "\n -> cuplaj: " + cuplaj + "\n -> pret: " + pret+ "\n -> tonaj: " + tonaj ;
+    }
 }
