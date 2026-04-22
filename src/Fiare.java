@@ -32,6 +32,10 @@ public class Fiare {
         return cuplaj;
     }
 
+    public void setNume(String nume) {
+        this.nume = nume;
+    }
+
     @Override
     public String toString() {
         return nume + "\n -> cuplaj: " + cuplaj + "\n -> pret: " + pret+ "\n -> tonaj: " + tonaj ;
