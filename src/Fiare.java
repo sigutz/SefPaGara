@@ -8,36 +8,33 @@ public class Fiare {
     private Integer tonaj;
     private Float pret;
     private Cuplaj cuplaj;
+    private boolean ocupat;
 
     public Fiare(String nume, Integer tonaj, Float pret, Cuplaj cuplaj) {
         this.nume = nume;
         this.tonaj = tonaj;
         this.pret = pret;
         this.cuplaj = cuplaj;
+        this.ocupat = false;
     }
 
-    public String getNume() {
-        return nume;
+    public boolean isOcupat() {
+        return ocupat;
     }
 
-    public Integer getTonaj() {
-        return tonaj;
+    public void setOcupat(boolean ocupat) {
+        this.ocupat = ocupat;
     }
 
-    public Float getPret() {
-        return pret;
-    }
-
-    public Cuplaj getCuplaj() {
-        return cuplaj;
-    }
-
-    public void setNume(String nume) {
-        this.nume = nume;
-    }
+    public String getNume() { return nume; }
+    public Integer getTonaj() { return tonaj; }
+    public Float getPret() { return pret; }
+    public Cuplaj getCuplaj() { return cuplaj; }
+    public void setNume(String nume) { this.nume = nume; }
 
     @Override
     public String toString() {
-        return nume + "\n -> cuplaj: " + cuplaj + "\n -> pret: " + pret+ "\n -> tonaj: " + tonaj ;
+        String stare = ocupat ? "[OCUPAT]" : "[LIBER ]";
+        return stare + " " + nume + " | Cuplaj: " + cuplaj + " | Pret: " + pret + " | Tonaj: " + tonaj;
     }
 }
